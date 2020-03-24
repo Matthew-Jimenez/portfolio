@@ -12,7 +12,7 @@ const Contact: FC<IContactProps> = props => {
         Contact
       </Typography>
 
-      <Typography variant="body1">mattjimenez091@gmail.com</Typography>
+      <Typography variant="body1">contact@matthewjimenez.com</Typography>
       <Typography variant="body1">661-912-7742</Typography>
     </Box>
   );
