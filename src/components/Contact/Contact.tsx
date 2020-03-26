@@ -8,12 +8,8 @@ interface IContactProps {}
 const Contact: FC<IContactProps> = props => {
   return (
     <Box pb={4}>
-      <Typography gutterBottom variant="h4">
-        Contact
-      </Typography>
-
-      <Typography variant="body1">contact@matthewjimenez.com</Typography>
-      <Typography variant="body1">661-912-7742</Typography>
+      <Typography variant="body1">email: contact@matthewjimenez.com</Typography>
+      <Typography variant="body1">phone: 661-912-7742</Typography>
     </Box>
   );
 };

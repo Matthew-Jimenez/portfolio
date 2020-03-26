@@ -7,7 +7,7 @@ interface ISkillsProps {}
 
 const Skills: FC<ISkillsProps> = props => {
   return (
-    <Box pb={4}>
+    <Box maxWidth={500} pb={4}>
       <Typography gutterBottom variant="h4">
         Skills
       </Typography>
