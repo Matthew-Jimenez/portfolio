@@ -21,7 +21,9 @@ const useStyles = makeStyles({
     paddingTop: 3,
     paddingLeft: 3,
     WebkitOverflowScrolling: "touch",
-    transform: "translateZ(0)"
+    transform: "translateZ(0)",
+    display: "flex",
+    alignItems: "stretch"
   },
 
   titleBar: {

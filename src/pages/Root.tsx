@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { Box, Typography, Container } from "@material-ui/core";
+import { Box, Typography, Container, Grid } from "@material-ui/core";
 
 import Skills from "../components/Skills/Skills";
 import Bio from "../components/Bio/Bio";
@@ -27,9 +27,15 @@ const Root: FC<IRootProps> = props => {
 
         <Contact />
 
-        <Bio />
+        <Grid container>
+          <Grid item xs={12} sm={12} md={7}>
+            <Bio />
+          </Grid>
 
-        <Skills />
+          <Grid item xs={12} sm={12} md={3}>
+            <Skills />
+          </Grid>
+        </Grid>
       </Container>
 
       <Box pb={4}>
@@ -41,23 +47,101 @@ const Root: FC<IRootProps> = props => {
 
         <Container style={{ padding: 0 }}>
           <HorizontalList id="experience">
-            <Box display="inline-block" width={8}></Box>
+            <Box display="inline-block" mr={1} width={8}></Box>
 
             {workHistory.map(item => (
-              <WorkHistoryItem
-                key={item.companyName}
-                companyName={item.companyName}
-                position={item.position}
-                duration={item.duration}
-                details={item.details}
-              />
+              <Box mr={2} key={item.companyName} minWidth={250}>
+                <WorkHistoryItem
+                  companyName={item.companyName}
+                  position={item.position}
+                  duration={item.duration}
+                  details={item.details}
+                />
+              </Box>
             ))}
+          </HorizontalList>
+        </Container>
+      </Box>
+
+      <Box pb={4}>
+        <Container>
+          <Typography gutterBottom variant="h4">
+            Projects
+          </Typography>
+        </Container>
+
+        <Container style={{ padding: 0 }}>
+          <HorizontalList id="experience">
+            <Box display="inline-block" mr={1} width={8}></Box>
+
+            {images.map(image => (
+              <a
+                style={{ display: "flex" }}
+                rel="noopener noreferrer"
+                target="_blank"
+                key={image.alt}
+                href={image.link}
+              >
+                <Box
+                  bgcolor={image.bg}
+                  borderRadius={4}
+                  boxShadow="0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12)"
+                  marginRight={2}
+                  display="flex"
+                  p={2}
+                  justifyContent="center"
+                  alignItems="center"
+                  minWidth={250}
+                  maxWidth={300}
+                >
+                  <img
+                    style={{
+                      height: "auto",
+                      width: "auto",
+                      maxWidth: "100%"
+                    }}
+                    alt={image.alt}
+                    src={image.url}
+                  />
+                </Box>
+              </a>
+            ))}
+
+            <Box display="inline-block" pl={1}></Box>
           </HorizontalList>
         </Container>
       </Box>
     </Box>
   );
 };
+
+const images = [
+  {
+    url: "https://v.fastcdn.co/u/431cc0e7/46421045-0-OAIF-Owl.png",
+    alt: "optionsai landing page",
+    bg: "#fff",
+    link: "https://optionsai.com"
+  },
+  {
+    url: "https://vintage-dig-dev.firebaseapp.com/assets/vintagedig-logo-4.png",
+    alt: "vintagedig website",
+    bg: "#056274",
+    link: "https://vintagedig.com"
+  },
+  {
+    url: "http://tattwo.com/img/logo.png",
+    alt: "tattwo landing page",
+    bg: "#9d3535",
+    link: "http://tattwo.com"
+  },
+  {
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/advancekern.appspot.com/o/ADVANCE-KERN-logo-white.png?alt=media&token=4e811ff5-a660-4753-8357-053fe64a6893",
+    alt: "advance kern website",
+    bg: "#373737",
+    link: "https://advancekern.com"
+  }
+];
 
 const workHistory = [
   {

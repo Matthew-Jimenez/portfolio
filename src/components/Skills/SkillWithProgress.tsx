@@ -22,7 +22,7 @@ const SkillWithProgress: FC<ISkillWithProgressProps> = ({
     >
       <Typography variant="body1">{label}</Typography>
 
-      <Box width="70%">
+      <Box width="60%">
         <LinearProgress variant="determinate" value={value} />
       </Box>
     </Box>
