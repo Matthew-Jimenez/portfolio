@@ -28,6 +28,13 @@ const TitleAndPosition: FC<ITitleAndPositionProps> = props => {
 
       <Grid container justify="center" item={true} xs={12} sm={12} md={4}>
         <Box
+          style={{
+            background:
+              "url('https://res.cloudinary.com/djizw1taj/image/upload/v1585523803/matthew-jimenz.png')",
+            backgroundSize: "cover",
+            backgroundPositionY: 6,
+            backgroundRepeat: "no-repeat"
+          }}
           marginBottom={2}
           borderRadius="50%"
           width={250}
