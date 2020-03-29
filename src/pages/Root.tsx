@@ -12,7 +12,7 @@ interface IRootProps {}
 
 const Root: FC<IRootProps> = props => {
   return (
-    <Box pt={1}>
+    <Box pt={2}>
       <Container>
         <Info />
 
