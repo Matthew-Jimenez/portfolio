@@ -21,6 +21,7 @@ const Root: FC<IRootProps> = props => {
         >
           Frontend Developer
         </Typography>
+
         <Typography color="primary" style={{ lineHeight: 1 }} variant="h1">
           Matthew Jimenez
         </Typography>
@@ -120,7 +121,7 @@ const images = [
     url: "https://v.fastcdn.co/u/431cc0e7/46421045-0-OAIF-Owl.png",
     alt: "optionsai landing page",
     bg: "#fff",
-    link: "https://optionsai.com"
+    link: "http://optionsai.com"
   },
   {
     url: "https://vintage-dig-dev.firebaseapp.com/assets/vintagedig-logo-4.png",
