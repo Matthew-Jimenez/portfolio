@@ -9,6 +9,7 @@ import HorizontalList from "../components/@ui/HorizontalList";
 import WorkHistoryItem from "../components/WorkHistory/WorkHistoryItem";
 import Projects from "../components/Projects/Projects";
 import WorkHistory from "../components/WorkHistory/WorkHistory";
+import TitleAndPosition from "../components/Title/TitleAndPosition";
 
 interface IRootProps {}
 
@@ -16,26 +17,16 @@ const Root: FC<IRootProps> = props => {
   return (
     <Box pt={1}>
       <Container>
-        <Typography
-          style={{ fontSize: "1.5rem" }}
-          variant="h2"
-          color="textSecondary"
-        >
-          Frontend Developer
-        </Typography>
-
-        <Typography color="primary" style={{ lineHeight: 1 }} variant="h1">
-          Matthew Jimenez
-        </Typography>
+        <TitleAndPosition />
 
         <Contact />
 
-        <Grid container>
-          <Grid item xs={12} sm={12} md={7}>
+        <Grid container={true}>
+          <Grid item={true} xs={12} sm={12} md={7}>
             <Bio />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={3}>
+          <Grid item={true} xs={12} sm={12} md={3}>
             <Skills />
           </Grid>
         </Grid>
