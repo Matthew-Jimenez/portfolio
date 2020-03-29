@@ -1,12 +1,10 @@
 import React, { FC } from "react";
 
-import { Box, Typography, Container, Grid } from "@material-ui/core";
+import { Box, Container, Grid } from "@material-ui/core";
 
 import Skills from "../components/Skills/Skills";
 import Bio from "../components/Bio/Bio";
 import Contact from "../components/Contact/Contact";
-import HorizontalList from "../components/@ui/HorizontalList";
-import WorkHistoryItem from "../components/WorkHistory/WorkHistoryItem";
 import Projects from "../components/Projects/Projects";
 import WorkHistory from "../components/WorkHistory/WorkHistory";
 import TitleAndPosition from "../components/Title/TitleAndPosition";
