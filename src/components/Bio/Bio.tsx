@@ -7,7 +7,7 @@ interface IBioProps {}
 
 const Bio: FC<IBioProps> = props => {
   return (
-    <Box maxWidth={500} pb={4}>
+    <Box pb={4}>
       <Typography gutterBottom variant="h4">
         About
       </Typography>

@@ -4,6 +4,7 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import HorizontalList from "../@ui/HorizontalList";
+import Project from "./Project";
 
 interface IProjectsProps {}
 
@@ -21,36 +22,7 @@ const Projects: FC<IProjectsProps> = () => {
           <Box display="inline-block" mr={1} width={8}></Box>
 
           {projects.map(image => (
-            <a
-              style={{ display: "flex" }}
-              rel="noopener noreferrer"
-              target="_blank"
-              key={image.alt}
-              href={image.link}
-            >
-              <Box
-                bgcolor={image.bg}
-                borderRadius={4}
-                boxShadow="0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12)"
-                marginRight={2}
-                display="flex"
-                p={2}
-                justifyContent="center"
-                alignItems="center"
-                minWidth={250}
-                maxWidth={300}
-              >
-                <img
-                  style={{
-                    height: "auto",
-                    width: "auto",
-                    maxWidth: "100%"
-                  }}
-                  alt={image.alt}
-                  src={image.url}
-                />
-              </Box>
-            </a>
+            <Project key={image.url} {...image} />
           ))}
 
           <Box display="inline-block" pl={1}></Box>

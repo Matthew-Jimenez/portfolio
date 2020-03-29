@@ -7,6 +7,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 interface ISkillWithProgressProps {
   value?: number;
   label?: string;
+  color?: string;
 }
 
 const SkillWithProgress: FC<ISkillWithProgressProps> = ({
