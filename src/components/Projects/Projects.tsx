@@ -37,26 +37,34 @@ const projects = [
     url: "https://v.fastcdn.co/u/431cc0e7/46421045-0-OAIF-Owl.png",
     alt: "optionsai landing page",
     bg: "#fff",
-    link: "http://optionsai.com"
+    link: "http://optionsai.com",
+    projectTitle: "Options AI",
+    projectDescription: `Options AI is a stock option trading platform that aims to help traders get in and out of trades with quick and with confidence.`
   },
   {
     url: "https://vintage-dig-dev.firebaseapp.com/assets/vintagedig-logo-4.png",
     alt: "vintagedig website",
     bg: "#056274",
-    link: "https://vintagedig.com"
+    link: "https://vintagedig.com",
+    projectTitle: "Vintagedig",
+    projectDescription: `Vintagedig.com is a website that allows vintage stores and individuals to post vintage or retro items for sale.`
   },
   {
     url: "http://tattwo.com/img/logo.png",
     alt: "tattwo landing page",
     bg: "#9d3535",
-    link: "http://tattwo.com"
+    link: "http://tattwo.com",
+    projectTitle: "Tattwo",
+    projectDescription: `Tattwo provideds a place to post and search through tattoos and tattoo artists. Users can also book appointments through the application.`
   },
   {
     url:
       "https://firebasestorage.googleapis.com/v0/b/advancekern.appspot.com/o/ADVANCE-KERN-logo-white.png?alt=media&token=4e811ff5-a660-4753-8357-053fe64a6893",
     alt: "advance kern website",
     bg: "#373737",
-    link: "https://advancekern.com"
+    link: "https://advancekern.com",
+    projectTitle: "Advance Kern",
+    projectDescription: `AdvanceKern.com was developed as a means to inform large businesses of the tax benefits that they may receive for establishing themselves in Kern County.`
   }
 ];
 
