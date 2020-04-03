@@ -32,11 +32,13 @@ const useStyles = makeStyles({
       "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)"
   },
   buttons: {
-    boxShadow: "0px 0px 2px 0px black",
+    boxShadow: "0px 0px 4px -1px black",
+    height: 50,
+    width: 50,
     cursor: "pointer",
     backgroundColor: "#f2f2f2",
     position: "absolute",
-    zIndex: 9000,
+    zIndex: 1200,
     top: "50%",
     padding: 9,
     borderRadius: "50%",
