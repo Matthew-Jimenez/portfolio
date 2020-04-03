@@ -1,7 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useMemo, useState, useEffect } from "react";
 
 import { makeStyles } from "@material-ui/core";
-import withWidth, { WithWidth } from "@material-ui/core/withWidth";
+import withWidth, { isWidthDown, WithWidth } from "@material-ui/core/withWidth";
+import { ChevronLeft, ChevronRight } from "@material-ui/icons";
 
 const removeScrollUnit = 20;
 
@@ -29,6 +30,24 @@ const useStyles = makeStyles({
   titleBar: {
     background:
       "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)"
+  },
+  buttons: {
+    boxShadow: "0px 0px 2px 0px black",
+    cursor: "pointer",
+    backgroundColor: "#f2f2f2",
+    position: "absolute",
+    zIndex: 9000,
+    top: "50%",
+    padding: 9,
+    borderRadius: "50%",
+    transform: "translateY(-50%)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "#fff"
+    }
   }
 });
 
@@ -43,10 +62,103 @@ const SingleLineGridList: FunctionComponent<IProps> = ({
   width,
   ...otherProps
 }) => {
+  const isMobile = useMemo(() => isWidthDown("md", width), [width]);
+
   const classes = useStyles();
+
+  const [hasScrollLeft, setHasScrollLeft] = useState(false);
+
+  const [hasScrollRight, setHasScrollRight] = useState(false);
+
+  useEffect(() => {
+    const inner = document.getElementById(id);
+
+    if (inner === null) {
+      return;
+    }
+
+    const parent = inner.parentElement;
+
+    if (!parent) {
+      return;
+    }
+
+    if (Math.abs(inner.scrollWidth - parent.scrollWidth) > 10) {
+      setHasScrollRight(true);
+    }
+  }, [children, id]);
+
+  const handleScroll = (scrollRight?: boolean) => {
+    const inner = document.getElementById(id);
+
+    if (inner === null) {
+      return;
+    }
+
+    const parent = inner.parentElement;
+
+    if (!parent) {
+      return;
+    }
+
+    let i = 0;
+    const myInt = setInterval(() => {
+      if (i >= 50) {
+        clearInterval(myInt);
+        return;
+      }
+
+      if (scrollRight) {
+        inner.scrollLeft = inner.scrollLeft + parent.scrollWidth / 50;
+      } else {
+        inner.scrollLeft = inner.scrollLeft - parent.scrollWidth / 50;
+      }
+
+      if (inner.scrollLeft === 0) {
+        setHasScrollLeft(false);
+      } else {
+        setHasScrollLeft(true);
+      }
+
+      if (
+        Math.abs(inner.scrollLeft + parent.scrollWidth - inner.scrollWidth) < 10
+      ) {
+        setHasScrollRight(false);
+      } else {
+        setHasScrollRight(true);
+      }
+
+      i++;
+    }, 10);
+  };
 
   return (
     <div {...otherProps} className={classes.root}>
+      {!isMobile && (
+        <>
+          {hasScrollLeft && (
+            <div
+              className={classes.buttons}
+              style={{
+                left: -20
+              }}
+              onClick={() => handleScroll()}
+            >
+              <ChevronLeft />
+            </div>
+          )}
+
+          {hasScrollRight && (
+            <div
+              className={classes.buttons}
+              style={{ right: -20 }}
+              onClick={() => handleScroll(true)}
+            >
+              <ChevronRight />
+            </div>
+          )}
+        </>
+      )}
       <div id={id} className={classes.gridList}>
         {children}
       </div>

@@ -17,8 +17,8 @@ const Projects: FC<IProjectsProps> = () => {
         </Typography>
       </Container>
 
-      <Container style={{ padding: 0 }}>
-        <HorizontalList id="experience">
+      <Container style={{ padding: 0, position: "relative" }}>
+        <HorizontalList id="projects">
           <Box display="inline-block" mr={1} width={8}></Box>
 
           {projects.map(image => (
@@ -65,6 +65,16 @@ const projects = [
     link: "https://advancekern.com",
     projectTitle: "Advance Kern",
     projectDescription: `AdvanceKern.com was developed as a means to inform large businesses of the tax benefits that they may receive for establishing themselves in Kern County.`
+  },
+  {
+    url:
+      "https://res.cloudinary.com/djizw1taj/image/upload/v1585877582/appname.png",
+    alt: "appname",
+    bg: "#fff",
+    link: "https://auth-demo.matthewjimenez.com/",
+    projectTitle: "Auth Demo App",
+    projectDescription:
+      "This small web app is meant to showcase handling registration and authentication in a React application. The application allows a user to sign up, log in, and store their session token. The frontend utilizes: React, TypeScript, validate.js, and Formik. The backend uses BAAS provider back4app."
   }
 ];
 
