@@ -16,10 +16,10 @@ const TitleAndPosition: FC<ITitleAndPositionProps> = props => {
           variant="h2"
           color="textSecondary"
         >
-          Frontend Developer
+          Senior Frontend Engineer
         </Typography>
 
-        <Typography color="primary" style={{ lineHeight: 1 }} variant="h1">
+        <Typography color="primary" style={{ lineHeight: 1 }} variant="h1" >
           Matthew Jimenez
         </Typography>
 

@@ -2,10 +2,8 @@ import React, { FC } from "react";
 
 import { Box, Container, Grid } from "@material-ui/core";
 
-import Skills from "../components/Skills/Skills";
 import Bio from "../components/Bio/Bio";
 import Projects from "../components/Projects/Projects";
-import WorkHistory from "../components/WorkHistory/WorkHistory";
 import Info from "../components/Info/TitleAndPosition";
 
 interface IRootProps {}
@@ -22,10 +20,10 @@ const Root: FC<IRootProps> = props => {
           </Grid>
         </Grid>
 
-        <Skills />
+        {/* <Skills /> */}
       </Container>
 
-      <WorkHistory />
+      {/* <WorkHistory /> */}
 
       <Projects />
     </Box>

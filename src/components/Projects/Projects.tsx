@@ -10,7 +10,7 @@ interface IProjectsProps {}
 
 const Projects: FC<IProjectsProps> = () => {
   return (
-    <Box pb={4}>
+    <Box pt={6} pb={4}>
       <Container>
         <Typography gutterBottom variant="h4">
           Projects
@@ -42,22 +42,6 @@ const projects = [
     projectDescription: `Options AI is a stock option trading platform that aims to help traders get in and out of trades with quick and with confidence.`
   },
   {
-    url: "https://vintage-dig-dev.firebaseapp.com/assets/vintagedig-logo-4.png",
-    alt: "vintagedig website",
-    bg: "#056274",
-    link: "https://vintagedig.com",
-    projectTitle: "Vintagedig",
-    projectDescription: `Vintagedig.com is a website that allows vintage stores and individuals to post vintage or retro items for sale.`
-  },
-  {
-    url: "http://tattwo.com/img/logo.png",
-    alt: "tattwo landing page",
-    bg: "#9d3535",
-    link: "http://tattwo.com",
-    projectTitle: "Tattwo",
-    projectDescription: `Tattwo provideds a place to post and search through tattoos and tattoo artists. Users can also book appointments through the application.`
-  },
-  {
     url:
       "https://firebasestorage.googleapis.com/v0/b/advancekern.appspot.com/o/ADVANCE-KERN-logo-white.png?alt=media&token=4e811ff5-a660-4753-8357-053fe64a6893",
     alt: "advance kern website",
@@ -66,16 +50,6 @@ const projects = [
     projectTitle: "Advance Kern",
     projectDescription: `AdvanceKern.com was developed as a means to inform large businesses of the tax benefits that they may receive for establishing themselves in Kern County.`
   },
-  {
-    url:
-      "https://res.cloudinary.com/djizw1taj/image/upload/v1585877582/appname.png",
-    alt: "appname",
-    bg: "#fff",
-    link: "https://auth-demo.matthewjimenez.com/",
-    projectTitle: "Auth Demo App",
-    projectDescription:
-      "This small web app is meant to showcase handling registration and authentication in a React application. The application allows a user to sign up, log in, and store their session token. The frontend utilizes: React, TypeScript, validate.js, and Formik. The backend uses BAAS provider back4app."
-  }
 ];
 
 export default Projects;

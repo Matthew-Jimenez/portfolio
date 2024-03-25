@@ -13,10 +13,7 @@ const Bio: FC<IBioProps> = props => {
       </Typography>
 
       <Typography gutterBottom={true} variant="body1">
-        Experienced Frontend Developer ready to produce quality results. 3 years
-        of professional work experience including small startup team
-        environments and remote collaboration. Specializing in the development
-        and optimization of full featured React web applications.
+        Senior Frontend Engineer with 7 years of experience, specializing in React and React Native. Experienced leading on and offshore teams, working with stakeholders to deliver high-value features, mentoring junior developers, designing highly performant achritecture, and pioneering advanced charting solutions. 
       </Typography>
     </Box>
   );
